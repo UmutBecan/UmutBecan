@@ -19,6 +19,7 @@ About twenty years across enterprise IT operations, infrastructure, security, di
 | [it-leadership-playbooks](https://github.com/UmutBecan/it-leadership-playbooks) | Vendor-neutral operating notes and templates: budget, service desk, audit readiness, disaster recovery, hardening and more |
 | [enterprise-infrastructure-lab](https://github.com/UmutBecan/enterprise-infrastructure-lab) | Layered architecture, quality engineering and agent-engine design, documented like production |
 | [security-operations-toolkit](https://github.com/UmutBecan/security-operations-toolkit) | Defensive, read-only checks for e-mail authentication, TLS certificates and HTTP security headers |
+| [agent-operating-model](https://github.com/UmutBecan/agent-operating-model) | Copy-and-edit operating model for working with AI agents: roles, cost modes, decision register, evidence rules, approval gates and a fail-closed Claude Code command hook |
 | [Korantix](https://korantix.io) | Domain and e-mail security monitoring from public data only: no credentials, no tenant access |
 
 ## Academic
