@@ -9,7 +9,7 @@ I lead enterprise IT infrastructure and operations and turn that experience into
 | | |
 |---|---|
 | **Run the domain security CLI** | `npx github:UmutBecan/security-operations-toolkit all yourdomain.com` — SPF, DMARC, MX, TLS and HTTP security headers, read-only, no install. [Repository →](https://github.com/UmutBecan/security-operations-toolkit) |
-| **Read the Microsoft 365 weekend migration case** | How a group of users moved mail, calendars and files to Microsoft 365 in one weekend window: what was agreed first, the schedule, and what I would check earlier. [Case →](https://github.com/UmutBecan/it-leadership-playbooks/blob/main/case-studies/09-weekend-mail-and-file-migration.md) |
+| **Read the Microsoft 365 weekend migration case** | How a group of users moved mail, calendars and files to Microsoft 365 in one weekend window: what was agreed first, the schedule, and what I would check earlier. [Case →](https://github.com/UmutBecan/it-leadership-playbooks/blob/main/case-studies/09-weekend-mail-and-file-migration.md) · [Weekend Migration Kit →](https://github.com/UmutBecan/it-leadership-playbooks/tree/main/kits/microsoft-365-weekend-migration) |
 | **Scan a domain with Korantix** | Score, the first finding to fix and the exact record to publish, from public data only. [korantix.io →](https://korantix.io/en) |
 
 Planning a Microsoft 365 migration or reviewing a domain's email security? [Message me on LinkedIn](https://www.linkedin.com/in/umutbecan).
@@ -21,9 +21,9 @@ Planning a Microsoft 365 migration or reviewing a domain's email security? [Mess
 | Repository | Who it helps | Try it in a minute |
 |---|---|---|
 | [security-operations-toolkit](https://github.com/UmutBecan/security-operations-toolkit) | IT and DevOps teams that want a scriptable answer to "is anything obviously wrong with this domain?" | Run the `npx` command above; exit code `2` means at least one failing check, so it fits a scheduled job. |
-| [it-leadership-playbooks](https://github.com/UmutBecan/it-leadership-playbooks) | IT managers who plan migrations, audits and budgets and do not want to start from a blank page | Open the weekend migration case and its templates; copy what fits. |
-| [enterprise-infrastructure-lab](https://github.com/UmutBecan/enterprise-infrastructure-lab) | Infrastructure engineers who need designs that show how they are tested and operated | Read the backup and recovery design and run the lab's tests. |
-| [agent-operating-model](https://github.com/UmutBecan/agent-operating-model) | Teams using AI coding agents who need approvals, cost limits and a way to block risky commands | Copy the fail-closed Claude Code command hook and the decision register. |
+| [it-leadership-playbooks](https://github.com/UmutBecan/it-leadership-playbooks) | IT managers who plan migrations, audits and budgets and do not want to start from a blank page | Open the [Microsoft 365 Weekend Migration Kit](https://github.com/UmutBecan/it-leadership-playbooks/tree/main/kits/microsoft-365-weekend-migration): go/no-go before the MX cutover, four templates in order. |
+| [enterprise-infrastructure-lab](https://github.com/UmutBecan/enterprise-infrastructure-lab) | Infrastructure engineers who need designs that show how they are tested and operated | Run a [restore drill](https://github.com/UmutBecan/enterprise-infrastructure-lab#run-a-restore-drill): `python tools/restore_drill.py` backs up, deletes, restores and verifies hashes, PASS or FAIL. |
+| [agent-operating-model](https://github.com/UmutBecan/agent-operating-model) | Teams using AI coding agents who need approvals, cost limits and a way to block risky commands | Copy the [Claude Code permissions demo](https://github.com/UmutBecan/agent-operating-model/tree/main/examples/claude-code-permissions): `git status` runs, `git push` asks, `rm -rf` is blocked. |
 
 ---
 
