@@ -71,13 +71,13 @@ async function build() {
   // The curated "Open tools" table above the markers already lists the repositories; this block adds only what changes:
   // product liveness, activity and the most recent commits (no second repository list).
   const focus = recent.sort((a, b) => b.when - a.when).slice(0, 5)
-    .map((c) => `- \`${c.repo}\` — ${esc(c.subject)}`);
+    .map((c) => `- \`${c.repo}\`: ${esc(c.subject)}`);
 
   return [
     "### Live status and activity",
     "",
     `- [Korantix](https://korantix.io): ${await health()}`,
-    `- Public commits in the last 30 days: **${commits30}${capped ? "+" : ""}** · languages by code size: ${languages || "—"}`,
+    `- Public commits in the last 30 days: **${commits30}${capped ? "+" : ""}** · languages by code size: ${languages || "none"}`,
     "",
     "### Current engineering focus (last 7 days)",
     "",

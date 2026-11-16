@@ -1,18 +1,29 @@
 # Umut Becan
 
-**Enterprise IT infrastructure & security · Microsoft 365 and email security · Founder of [Korantix](https://korantix.io)**
+**Enterprise infrastructure · migrations and recovery · security and audits · Founder of [Korantix](https://korantix.io)**
 
-I lead enterprise IT infrastructure and operations and turn that experience into open tools and playbooks. I founded Korantix and publish practical resources for teams planning Microsoft 365 migrations, testing recovery and securing their domains.
+I have run enterprise IT for about twenty years, from the support desk and server rooms to private cloud operations, disaster recovery tests, IT audits, mail and file migrations and the IT side of company separations. I turn what works into open tools and playbooks, and I founded Korantix for email and domain security. MSc in Computer Engineering.
 
 ### Start here
 
 | | |
 |---|---|
-| **Run the domain security CLI** | `npx github:UmutBecan/security-operations-toolkit all yourdomain.com` — SPF, DMARC, MX, TLS and HTTP security headers, read-only, no install. [Repository →](https://github.com/UmutBecan/security-operations-toolkit) |
+| **Run the domain security CLI** | `npx github:UmutBecan/security-operations-toolkit all yourdomain.com` checks SPF, DMARC, MX, TLS and HTTP security headers. Read-only, no install. [Repository →](https://github.com/UmutBecan/security-operations-toolkit) |
 | **Read the Microsoft 365 weekend migration case** | How a group of users moved mail, calendars and files to Microsoft 365 in one weekend window: what was agreed first, the schedule, and what I would check earlier. [Case →](https://github.com/UmutBecan/it-leadership-playbooks/blob/main/case-studies/09-weekend-mail-and-file-migration.md) · [Weekend Migration Kit →](https://github.com/UmutBecan/it-leadership-playbooks/tree/main/kits/microsoft-365-weekend-migration) |
 | **Scan a domain with Korantix** | Score, the first finding to fix and the exact record to publish, from public data only. [korantix.io →](https://korantix.io/en) |
 
 Planning a Microsoft 365 migration or reviewing a domain's email security? [Message me on LinkedIn](https://www.linkedin.com/in/umutbecan).
+
+---
+
+## What I work on
+
+- **Infrastructure and resilience:** virtualization, private cloud, backup and recovery, network design, planned recovery testing.
+- **Migrations and separations:** mail and file moves to Microsoft 365, and the IT side of selling or separating part of a company.
+- **Security and governance:** hardening baselines, vulnerability management, audit readiness, security awareness, vendor management.
+- **Operations and service management:** service desk, endpoint and mobile device management, patching, service levels, multi-country field support.
+- **Budget and delivery:** OPEX and CAPEX models, KPI scorecards, project portfolios.
+- **Building:** Korantix, open tools, and an operating model for AI-assisted IT work with approval gates.
 
 ---
 
@@ -56,13 +67,13 @@ Rule-based scoring: the same DNS answers give the same score; no model guesses a
 
 ### Current engineering focus (last 7 days)
 
-- `security-operations-toolkit` — chore(release): number the release v1.1.0 (v1.0.0 tag already exists)
-- `security-operations-toolkit` — chore(release): v0.2.0 changelog, release notes, Actions example, verified run
-- `security-operations-toolkit` — ci: test on Node 20, 22 and 24
-- `security-operations-toolkit` — feat(cli): --help exits 0; add next-step hint and --no-hint
-- `security-operations-toolkit` — fix(mail): follow RFC 9989 for DMARC pct/t and tree walk; RFC 5321 implicit MX
+- `security-operations-toolkit`: chore(release): number the release v1.1.0 (v1.0.0 tag already exists)
+- `security-operations-toolkit`: chore(release): v0.2.0 changelog, release notes, Actions example, verified run
+- `security-operations-toolkit`: ci: test on Node 20, 22 and 24
+- `security-operations-toolkit`: feat(cli): --help exits 0; add next-step hint and --no-hint
+- `security-operations-toolkit`: fix(mail): follow RFC 9989 for DMARC pct/t and tree walk; RFC 5321 implicit MX
 
-_Last refreshed: 2026-11-16 21:44 UTC · public data only · [how](scripts/sync-profile.mjs)_
+_Last refreshed: 2026-11-16 22:02 UTC · public data only · [how](scripts/sync-profile.mjs)_
 <!-- END_DYNAMIC_PORTFOLIO -->
 
 ---
