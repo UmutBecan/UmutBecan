@@ -52,17 +52,17 @@ Rule-based scoring: the same DNS answers give the same score; no model guesses a
 ### Live status and activity
 
 - [Korantix](https://korantix.io): 🟢 Operational · HTTP 200 on `/api/health`
-- Public commits in the last 30 days: **52** · languages by code size: Python 70% · JavaScript 30%
+- Public commits in the last 30 days: **61** · languages by code size: Python 70% · JavaScript 30%
 
 ### Current engineering focus (last 7 days)
 
-- `security-operations-toolkit` — docs: npx one-liner, real JSON example, package metadata
-- `security-operations-toolkit` — docs: add quick start and Korantix bridge
-- `agent-operating-model` — chore: ignore secret material
-- `agent-operating-model` — ci: remove outdated draft comment from tests workflow
-- `security-operations-toolkit` — docs: use full name in license copyright line
+- `security-operations-toolkit` — chore(release): number the release v1.1.0 (v1.0.0 tag already exists)
+- `security-operations-toolkit` — chore(release): v0.2.0 changelog, release notes, Actions example, verified run
+- `security-operations-toolkit` — ci: test on Node 20, 22 and 24
+- `security-operations-toolkit` — feat(cli): --help exits 0; add next-step hint and --no-hint
+- `security-operations-toolkit` — fix(mail): follow RFC 9989 for DMARC pct/t and tree walk; RFC 5321 implicit MX
 
-_Last refreshed: 2026-11-16 21:33 UTC · public data only · [how](scripts/sync-profile.mjs)_
+_Last refreshed: 2026-11-16 21:44 UTC · public data only · [how](scripts/sync-profile.mjs)_
 <!-- END_DYNAMIC_PORTFOLIO -->
 
 ---
