@@ -1,0 +1,48 @@
+name: Update profile
+
+# Refreshes the dynamic block of README.md from public data (scripts/sync-profile.mjs).
+# Triggers: every 6 hours, manually, when the script or this workflow changes, and on demand from other
+# repositories via repository_dispatch (type "profile-refresh"; needs a token with access to this repo).
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync-profile.mjs"
+      - ".github/workflows/update-profile.yml"
+  repository_dispatch:
+    types: [profile-refresh]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Refresh dynamic portfolio
+        run: node scripts/sync-profile.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit when the visible content changed
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore(profile): refresh dynamic portfolio"
+          git push
