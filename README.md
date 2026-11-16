@@ -1,21 +1,37 @@
 # Umut Becan
 
-**Building deterministic B2B SaaS, email & domain security infrastructure, and AI-driven intelligence systems.**
+**Enterprise IT infrastructure & security · Microsoft 365 and email security · Founder of [Korantix](https://korantix.io)**
 
-Founder of [Korantix](https://korantix.io). About twenty years in enterprise IT operations, infrastructure, security and technology governance. I started at the support desk and in server rooms, and I still build, test and run what I design.
+I lead enterprise IT infrastructure and operations and turn that experience into open tools and playbooks. I founded Korantix and publish practical resources for teams planning Microsoft 365 migrations, testing recovery and securing their domains.
 
-[![korantix.io](https://img.shields.io/website?url=https%3A%2F%2Fkorantix.io%2Fapi%2Fhealth&label=korantix.io&up_message=live&down_message=down)](https://korantix.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-umutbecan-0A66C2)](https://www.linkedin.com/in/umutbecan)
+### Start here
+
+| | |
+|---|---|
+| **Run the domain security CLI** | `npx github:UmutBecan/security-operations-toolkit all yourdomain.com` — SPF, DMARC, MX, TLS and HTTP security headers, read-only, no install. [Repository →](https://github.com/UmutBecan/security-operations-toolkit) |
+| **Read the Microsoft 365 weekend migration case** | How a group of users moved mail, calendars and files to Microsoft 365 in one weekend window: what was agreed first, the schedule, and what I would check earlier. [Case →](https://github.com/UmutBecan/it-leadership-playbooks/blob/main/case-studies/09-weekend-mail-and-file-migration.md) |
+| **Scan a domain with Korantix** | Score, the first finding to fix and the exact record to publish, from public data only. [korantix.io →](https://korantix.io/en) |
+
+Planning a Microsoft 365 migration or reviewing a domain's email security? [Message me on LinkedIn](https://www.linkedin.com/in/umutbecan).
 
 ---
 
-## Flagship: Korantix
+## Open tools
+
+| Repository | Who it helps | Try it in a minute |
+|---|---|---|
+| [security-operations-toolkit](https://github.com/UmutBecan/security-operations-toolkit) | IT and DevOps teams that want a scriptable answer to "is anything obviously wrong with this domain?" | Run the `npx` command above; exit code `2` means at least one failing check, so it fits a scheduled job. |
+| [it-leadership-playbooks](https://github.com/UmutBecan/it-leadership-playbooks) | IT managers who plan migrations, audits and budgets and do not want to start from a blank page | Open the weekend migration case and its templates; copy what fits. |
+| [enterprise-infrastructure-lab](https://github.com/UmutBecan/enterprise-infrastructure-lab) | Infrastructure engineers who need designs that show how they are tested and operated | Read the backup and recovery design and run the lab's tests. |
+| [agent-operating-model](https://github.com/UmutBecan/agent-operating-model) | Teams using AI coding agents who need approvals, cost limits and a way to block risky commands | Copy the fail-closed Claude Code command hook and the decision register. |
+
+---
+
+## Korantix
 
 **Domain and email security monitoring from public data only. No credentials, no tenant access, no installed agent.**
 
-Enter a domain and get a deterministic score, the one finding to fix first, who should fix it and the exact record to publish. Accounts add daily monitoring, change detection and alerts.
-
-**Try it:** [korantix.io/en?domain=yourcompany.com](https://korantix.io/en?domain=yourcompany.com) opens the scanner with your domain filled in.
+Enter a domain and get a deterministic score, the one finding to fix first, who should fix it and the exact record to publish. Accounts add daily monitoring, change detection and alerts. [Try it with your domain →](https://korantix.io/en?domain=yourcompany.com)
 
 ```mermaid
 flowchart LR
@@ -28,46 +44,15 @@ flowchart LR
   M --> A["Alerts: email · webhooks · weekly digest"]
 ```
 
-| | |
-|---|---|
-| **Scoring** | Rule-based and repeatable: the same DNS answers give the same score. No model guesses a security verdict. |
-| **Scope** | Public DNS, TLS and SMTP data only. DKIM is never reported missing without a known or discovered selector. |
-| **Stack** | Next.js (App Router), TypeScript, PostgreSQL on Supabase with RLS, Fly.io, Resend, Creem billing |
-| **Quality gates** | Type check, ~3,000 unit tests, Playwright browser checks, axe accessibility checks |
-
----
-
-## Featured engineering
-
-| Repository | Problem | Solution |
-|---|---|---|
-| [security-operations-toolkit](https://github.com/UmutBecan/security-operations-toolkit) | Expired certificates, missing DMARC and weak HTTP headers are usually found late, by a customer or an auditor. | Zero-dependency Node CLI with read-only checks and a remediation hint per finding. Run it now: `npx github:UmutBecan/security-operations-toolkit all example.com` |
-| [agent-operating-model](https://github.com/UmutBecan/agent-operating-model) | AI agents drift, overspend and act without approval when nobody defines the rules. | Copy-and-edit operating model: roles, cost modes, decision register, evidence rules, approval gates and a fail-closed Claude Code command hook. |
-| [it-leadership-playbooks](https://github.com/UmutBecan/it-leadership-playbooks) | IT teams rebuild the same budget, service desk and audit material in every company. | Vendor-neutral templates: budget model, service desk, audit readiness, disaster recovery, hardening. |
-| [enterprise-infrastructure-lab](https://github.com/UmutBecan/enterprise-infrastructure-lab) | Reference architectures rarely show how they are tested and operated. | Layered architecture, quality engineering and agent-engine design, documented like production. |
+Rule-based scoring: the same DNS answers give the same score; no model guesses a security verdict. DKIM is never reported missing without a known or discovered selector.
 
 ---
 
 <!-- START_DYNAMIC_PORTFOLIO -->
-### Live product status
+### Live status and activity
 
-| Product | Status |
-|---|---|
-| [Korantix](https://korantix.io) | 🟢 Operational · HTTP 200 on `/api/health` |
-
-### Latest shipped & active builds
-
-| Repository | What it is | Language | Last push |
-|---|---|---|---|
-| [security-operations-toolkit](https://github.com/UmutBecan/security-operations-toolkit) | Defensive, read-only checks for a domain's external security posture: email authentication (SPF, DMARC), TLS certificates and HTTP security headers, with remediation hints. | JavaScript | 2026-11-16 |
-| [agent-operating-model](https://github.com/UmutBecan/agent-operating-model) | Copy-and-edit operating model for working with AI agents: roles, cost modes, decision register, evidence rules, approval gates, and a fail-closed Claude Code command hook. | Python | 2026-11-16 |
-| [enterprise-infrastructure-lab](https://github.com/UmutBecan/enterprise-infrastructure-lab) | Reference designs for enterprise infrastructure, from hardware to services: network segmentation, backup and recovery, access model, quality gates and an AI-agent operating model. Short, reviewable, sanitized. | Python | 2026-10-28 |
-| [it-leadership-playbooks](https://github.com/UmutBecan/it-leadership-playbooks) | Ready-to-adapt IT operations playbooks: budget model, service desk, patching, vulnerability management, audit readiness, KPIs and vendor management. Vendor-neutral, written to be copied and edited. | Python | 2026-10-28 |
-
-### Engineering activity (public repositories)
-
-- Commits in the last 30 days: **52**
-- Languages by code size: Python 70% · JavaScript 30%
+- [Korantix](https://korantix.io): 🟢 Operational · HTTP 200 on `/api/health`
+- Public commits in the last 30 days: **52** · languages by code size: Python 70% · JavaScript 30%
 
 ### Current engineering focus (last 7 days)
 
@@ -77,7 +62,7 @@ flowchart LR
 - `agent-operating-model` — ci: remove outdated draft comment from tests workflow
 - `security-operations-toolkit` — docs: use full name in license copyright line
 
-_Last refreshed: 2026-11-16 21:13 UTC · public data only · [how](scripts/sync-profile.mjs)_
+_Last refreshed: 2026-11-16 21:33 UTC · public data only · [how](scripts/sync-profile.mjs)_
 <!-- END_DYNAMIC_PORTFOLIO -->
 
 ---

@@ -39,7 +39,6 @@ async function health() {
 }
 
 const esc = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\r?\n/g, " ").trim();
-const day = (iso) => iso.slice(0, 10);
 
 async function build() {
   // /users/:user/repos lists public repositories only, whatever the token can see.
@@ -69,29 +68,16 @@ async function build() {
   const languages = [...langBytes.entries()].filter(([, b]) => b / totalBytes >= 0.01).sort((a, b) => b[1] - a[1]).slice(0, 5)
     .map(([l, b]) => `${l} ${((b / totalBytes) * 100).toFixed(0)}%`).join(" · ");
 
-  const latest = repos.slice(0, 5).map((r) =>
-    `| [${esc(r.name)}](${r.html_url}) | ${esc(r.description) || "—"} | ${esc(r.language) || "—"} | ${day(r.pushed_at)} |`);
-
+  // The curated "Open tools" table above the markers already lists the repositories; this block adds only what changes:
+  // product liveness, activity and the most recent commits (no second repository list).
   const focus = recent.sort((a, b) => b.when - a.when).slice(0, 5)
     .map((c) => `- \`${c.repo}\` — ${esc(c.subject)}`);
 
   return [
-    "### Live product status",
+    "### Live status and activity",
     "",
-    `| Product | Status |`,
-    `|---|---|`,
-    `| [Korantix](https://korantix.io) | ${await health()} |`,
-    "",
-    "### Latest shipped & active builds",
-    "",
-    "| Repository | What it is | Language | Last push |",
-    "|---|---|---|---|",
-    ...latest,
-    "",
-    "### Engineering activity (public repositories)",
-    "",
-    `- Commits in the last 30 days: **${commits30}${capped ? "+" : ""}**`,
-    `- Languages by code size: ${languages || "—"}`,
+    `- [Korantix](https://korantix.io): ${await health()}`,
+    `- Public commits in the last 30 days: **${commits30}${capped ? "+" : ""}** · languages by code size: ${languages || "—"}`,
     "",
     "### Current engineering focus (last 7 days)",
     "",
