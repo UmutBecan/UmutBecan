@@ -66,17 +66,18 @@ flowchart LR
 
 ### Engineering activity (public repositories)
 
-- Commits in the last 30 days: **51**
+- Commits in the last 30 days: **52**
 - Languages by code size: Python 70% · JavaScript 30%
 
 ### Current engineering focus (last 7 days)
 
+- `security-operations-toolkit` — docs: npx one-liner, real JSON example, package metadata
 - `security-operations-toolkit` — docs: add quick start and Korantix bridge
 - `agent-operating-model` — chore: ignore secret material
 - `agent-operating-model` — ci: remove outdated draft comment from tests workflow
 - `security-operations-toolkit` — docs: use full name in license copyright line
 
-_Last refreshed: 2026-11-16 21:11 UTC · public data only · [how](scripts/sync-profile.mjs)_
+_Last refreshed: 2026-11-16 21:13 UTC · public data only · [how](scripts/sync-profile.mjs)_
 <!-- END_DYNAMIC_PORTFOLIO -->
 
 ---
