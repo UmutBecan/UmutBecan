@@ -63,17 +63,17 @@ Rule-based scoring: the same DNS answers give the same score; no model guesses a
 ### Live status and activity
 
 - [Korantix](https://korantix.io): 🟢 Operational · HTTP 200 on `/api/health`
-- Public commits in the last 30 days: **67** · languages by code size: Python 59% · JavaScript 41%
+- Public commits in the last 30 days: **69** · languages by code size: Python 52% · JavaScript 48%
 
 ### Current engineering focus (last 7 days)
 
+- `security-operations-toolkit`: docs: date v1.2.0 changelog; mark example domains as ones to replace
+- `enterprise-infrastructure-lab`: chore: git-ignore restore evidence records and document host/operator fields
 - `agent-operating-model`: feat: policy-as-code for command tiers, adversarial bypass corpus and replay harness
 - `security-operations-toolkit`: docs: v1.2.0 pipeline docs, code-scanning workflow example, version bump
 - `security-operations-toolkit`: feat(cli): batch mode (--file), --format sarif\|markdown, --dkim-selector
-- `security-operations-toolkit`: feat(mail): MTA-STS, TLS-RPT and DKIM selector checks with stable rule ids
-- `enterprise-infrastructure-lab`: feat: audit-ready restore evidence (measured RTO/RPO, sealed record, verifier)
 
-_Last refreshed: 2026-11-16 22:28 UTC · public data only · [how](scripts/sync-profile.mjs)_
+_Last refreshed: 2026-11-17 05:30 UTC · public data only · [how](scripts/sync-profile.mjs)_
 <!-- END_DYNAMIC_PORTFOLIO -->
 
 ---
